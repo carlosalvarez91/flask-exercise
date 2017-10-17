@@ -1,6 +1,34 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-  test
-  {{ object_list }}
+<table border=1 cellpadding=7>
+    <tr>
+        <th>Property Name</th>
+        <th>Property Name [1]</th>
+        <th>Property Name [2]</th>
+        <th>Property Name [3]</th>
+        <th>Property Name [4]</th>
+        <th>Unit Name</th>
+        <th>Tenant Name</th>
+        <th>Lease Start Date</th>
+        <th>Lease End Date</th>
+        <th>Lease Years</th>
+        <th>Lease Current Rent</th>
+    </tr>
+    {% for obj in object_list %}
+    <tr>
+        <td>{{ obj.Property_Name }}</td>
+        <td>{{ obj.Property_Address_1 }}</td>
+        <td>{{ obj.Property_Address_2 }}</td>
+        <td>{{ obj.Property_Address_3 }}</td>
+        <td>{{ obj.Property_Address_4 }}</td>
+        <td>{{ obj.Unit_Name }}</td>
+        <td>{{ obj.Tenant_Name }}</td>
+        <td>{{ obj.Lease_Start_Date }}</td>
+        <td>{{ obj.Lease_End_Date }}</td>
+        <td>{{ obj.Lease_Years }}</td>
+        <td>{{ obj.Current_Rent }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}
