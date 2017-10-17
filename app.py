@@ -12,10 +12,9 @@ app = Flask(__name__)
 
 def get_csv():
     with open('data.csv', 'rb') as csv_file:
-        csv_obj = csv.DictReader(csv_file)
-        # here i suppose to replace white spaces for '_' and remove the '[]' in order to call each row at the frontend
-        #if I cant, Im gonna change the data.csv, Property Name => Property_Name and [1] => 1
-        csv_list = list(csv_obj)
+        csv_obj = csv.DictReader(csv_file) # here i suppose to replace white spaces for '_' and remove the '[]' in order to call each row at the frontend; if I cant, Im gonna change the data.csv, Property Name => Property_Name and [1] => 1
+        srt = sorted(csv_obj, key=lambda row: row, reverse=True)#list sorted by lease amount in ascending order.
+        csv_list = list(srt)
     return csv_list
 
 @app.route('/')
