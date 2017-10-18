@@ -1,21 +1,32 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<table border=1 cellpadding=7>
-    <tr>
-        <th>Property Name</th>
-        <th>Property Name [1]</th>
-        <th>Property Name [2]</th>
-        <th>Property Name [3]</th>
-        <th>Property Name [4]</th>
-        <th>Unit Name</th>
-        <th>Tenant Name</th>
-        <th>Lease Start Date</th>
-        <th>Lease End Date</th>
-        <th>Lease Years</th>
-        <th>Lease Current Rent</th>
-    </tr>
+<table class="table">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Property Name</th>
+            <th>Property Name [1]</th>
+            <th>Property Name [2]</th>
+            <th>Property Name [3]</th>
+            <th>Property Name [4]</th>
+            <th>Unit Name</th>
+            <th>Tenant Name</th>
+            <th>Lease Start Date</th>
+            <th>Lease End Date</th>
+            <th>Lease Years</th>
+            <th>Lease Current Rent
+                <!--Clean this up!-->
+                    <form action="/toggle/" method="post">
+                        <button type="submit">Desc</button>
+                    </form>
+                    <form action="/">
+                        <button type="submit">Asc</button>
+                    </form>
+            </th>
+        </tr>
+    </thead>
     {% for obj in object_list %}
+    <tbody>
     <tr>
         <td>{{ obj.Property_Name }}</td>
         <td>{{ obj.Property_Address_1 }}</td>
@@ -29,6 +40,7 @@
         <td>{{ obj.Lease_Years }}</td>
         <td>{{ obj.Current_Rent }}</td>
     </tr>
+    </tbody>
     {% endfor %}
 </table>
 {% endblock %}
