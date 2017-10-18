@@ -44,4 +44,20 @@
     {% endfor %}
 </table>
 <strong>Total Lease Current Rent:</strong> {{ col_sum }}
+
+<form action="/write/" method="post">
+    <input type="text" name="Property_Name"><br>
+    <input type="text" name="Property_Address_1"><br>
+    <input type="text" name="Property_Address_2"><br>
+    <input type="text" name="Property_Address_3"><br>
+    <input type="text" name="Property_Address_4"><br>
+    <input type="text" name="Unit_Name"><br>
+    <input type="text" name="Tenant_Name"><br>
+    <input type="text" name="Lease_Start_Date"><br>
+    <input type="text" name="Lease_End_Date"><br>
+    <input type="text" name="Lease_Years"><br>
+    <input type="text" name="Current_Rent"><br>
+    <input type="submit" value="Submit">
+</form>
+
 {% endblock %}

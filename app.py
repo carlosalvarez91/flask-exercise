@@ -1,5 +1,6 @@
 import csv
-from flask import Flask, render_template
+import os
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -48,7 +49,47 @@ def index():
     object_list =  get_csv()#[0]
     col_sum = total()
     return render_template(template, object_list=object_list, col_sum=col_sum)
-
+#write
+@app.route('/write/', methods=['POST'])
+def write():
+    Property_Name = request.form['Property_Name']
+    Property_Address_1 = request.form['Property_Address_1']
+    Property_Address_2 = request.form['Property_Address_2']
+    Property_Address_3 = request.form['Property_Address_3']
+    Property_Address_4 = request.form['Property_Address_4']
+    Unit_Name = request.form['Unit_Name']
+    Tenant_Name = request.form['Tenant_Name']
+    Lease_Start_Date = request.form['Lease_Start_Date']
+    Lease_End_Date = request.form['Lease_End_Date']
+    Lease_Years = request.form['Lease_Years']
+    Current_Rent = request.form['Current_Rent']
+    fieldnames=[
+        'Property_Name',
+        'Property_Address_1',
+        'Property_Address_2',
+        'Property_Address_3',
+        'Property_Address_4',
+        'Unit_Name',
+        'Tenant_Name',
+        'Lease_Start_Date',
+        'Lease_End_Date',
+        'Lease_Years',
+        'Current_Rent']
+    with open('data.csv','a') as inFile:
+        writer = csv.DictWriter(inFile, fieldnames=fieldnames)
+        writer.writerow({
+            'Property_Name':Property_Name,
+            'Property_Address_1':Property_Address_1,
+            'Property_Address_2':Property_Address_2,
+            'Property_Address_3':Property_Address_3,
+            'Property_Address_4':Property_Address_4,
+            'Unit_Name':Unit_Name,
+            'Tenant_Name':Tenant_Name,
+            'Lease_Start_Date':Lease_Start_Date,
+            'Lease_End_Date':Lease_Years,
+            'Current_Rent':Current_Rent
+        })
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
