@@ -16,20 +16,37 @@ def get_csv():
         srt = sorted(csv_obj, key=lambda row: row, reverse=True)#list sorted by lease amount in ascending order.
         csv_list = list(srt)[:5]# [:5] display the first 5 items
     return csv_list
+#total rents
+def total():
+    csv_file = csv.reader(open("data.csv"))
+    dist = 0
+    for row in csv_file:
+        _dist = row[10]
+        try: 
+            _dist = float(_dist)
+        except ValueError:
+            _dist = 0
+
+        dist += _dist
+        print dist
+    return dist
+#toggle to desc order
+@app.route("/toggle/", methods=['POST'])
+def toggle_desc():
+    with open('data.csv', 'rb') as csv_file:
+        csv_obj = csv.DictReader(csv_file)
+        srt = sorted(csv_obj, key=lambda row: row, reverse=False)#list sorted by lease amount in descending order.
+        object_list = list(srt)[:5]
+    col_sum = total()
+    return render_template('home.html', object_list=object_list, col_sum=col_sum)
+
 
 @app.route('/')
 def index():
     template = 'home.html'
-    object_list =  get_csv()
-    return render_template(template, object_list=object_list)
-
-@app.route("/toggle/", methods=['POST'])
-def move_forward():
-    with open('data.csv', 'rb') as csv_file:
-        csv_obj = csv.DictReader(csv_file) # here i suppose to replace white spaces for '_' and remove the '[]' in order to call each row at the frontend; if I cant, Im gonna change the data.csv, Property Name => Property_Name and [1] => 1
-        srt = sorted(csv_obj, key=lambda row: row, reverse=False)#list sorted by lease amount in ascending order.
-        object_list = list(srt)[:5]# [:5] display the first 5 items
-    return render_template('home.html', object_list=object_list)
+    object_list =  get_csv()#[0]
+    col_sum = total()
+    return render_template(template, object_list=object_list, col_sum=col_sum)
 
 
 if __name__ == '__main__':
