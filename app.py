@@ -6,9 +6,10 @@ app = Flask(__name__)
 #def get_csv():
 #    csv_path = 'data.csv'
 #    csv_file = open(csv_path, 'rb' )
-#    csv_obj = csv.DictReader(csv_file, delimiter=' ')
-#    csv_list = list(csv_obj)
-#    return csv_list
+#    csv_obj = csv.DictReader(csv_file)
+#    srt = sorted(csv_obj, key=lambda row: row, reverse=True)#list sorted by lease amount in ascending order.
+#    csv_list = list(srt)[:5]# [:5] display the first 5 items
+#    return csv_list, csv_file
 
 def get_csv():
     with open('data.csv', 'rb') as csv_file:
@@ -18,7 +19,7 @@ def get_csv():
     return csv_list
 #total rents
 def total():
-    csv_file = csv.reader(open("data.csv"))
+    csv_file = csv.reader(open("data.csv"))#try to get it from get_csv() instead
     dist = 0
     for row in csv_file:
         _dist = row[10]

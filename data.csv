@@ -1,5 +1,5 @@
 Property_Name,Property_Address_1,Property_Address_2,Property_Address_3,Property_Address_4,Unit_Name,Tenant_Name,Lease_Start_Date,Lease_End_Date,Lease_Years,Current_Rent
-Beecroft Hill,Broad Lane,LS13,Beecroft Hill - Telecom App, ,Arqiva Services ltd,01 Mar 1994,28 Feb 2058, ,64,23950.00
+Beecroft Hill,Broad Lane, , ,LS13,Beecroft Hill - Telecom App,Arqiva Services ltd,01 Mar 1994,28 Feb 2058,64,23950.00
 Potternewton Crescent,Potternewton Est Playing Field,,,LS7,Potternewton Est Playing Field,Arqiva Ltd,24 Jun 1999,23 Jun 2019,20,6600.00
 Seacroft Gate (Chase) - Block 2,Telecomms Apparatus,Leeds,,LS14,Seacroft Gate (Chase) block 2-Telecom App.,Vodafone Ltd.,30 Jan 2004,29 Jan 2029,25,12250.00
 Queenswood Heights,Queenswood Heights,Queenswood Gardens,Headingley,Leeds,Queenswood Hgt-Telecom App.,Vodafone Ltd,08 Nov 2004,07 Nov 2029,25,9500.00
@@ -26,7 +26,7 @@ Clayton Court,Fillingfir Drive,,Leeds,LS18,Clayton Court LDS198   LS0056,Everyth
 Meynell Heights,,,,LS11,Meynell Heights- Wyk0184,Everything Everywhere Ltd & Hutchinson 3G UK,03 Aug 2009,02 Aug 2019,10,12750.00
 Larkhill Road,Lidgett Towers,Larkhill Road,Leeds,,Lidgett Towers - Site ref 27874,Everything Everywhere Ltd&Hutchison 3G UK Ltd,05 Jul 2010,04 Jul 2020,10,13000.00
 Marlborough Towers,Marlborough Towers,Park Lane,Leeds,,Marlborough Towers-Telecom App 7942vf,Cornerstone Telecommunications Infrastructure,31 Mar 2015,30 Mar 2030,15,15000.00
-Queenswood Drive - Telecom Site,Headingley,Leeds,LS6,,Queenswood Drive-Q'wood Ct building 19089o2,Cornerstone Telecommunications Infrastructure,31 Mar 2015,30 Mar 2030,15,15000.00
+Queenswood Drive - Telecom Site,Headingley,,Leeds,LS6,Queenswood Drive-Q'wood Ct building 19089o2,Cornerstone Telecommunications Infrastructure,31 Mar 2015,30 Mar 2030,15,15000.00
 Clayton Court,Fillingfir,,Leeds,,Clayton Court 11279vf,Cornerstone Telecommunications Infrastructure,31 Mar 2015,30 Mar 2030,15,15000.00
 Gledhow Towers - Telecom App,Brackenwood Drive,Leeds,,,Gledhow Towers - Telecom App (34909vf),Cornerstone Telecommunications Infrastructure,31 Mar 2015,30 Mar 2030,15,15000.00
 Larkhill Road,Lidgett Towers,Larkhill Road,Leeds,,Lidgett Towers - Telecom App 3420vf,Cornerstone Telecommunications Infrastructure,31 Mar 2015,30 Mar 2030,15,15000.00
