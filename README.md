@@ -16,17 +16,23 @@ This list should use the date format of: DD/MM/YYYY.
 
 
 Comments
--------------------
+---------------
 
 > **a)** Missing point 5 and 6.
-
->**b)** I had to modify the CSV file as there were white spaces at the header, for example: 'Property Name' , so I couldn't call each object from the html inside the table like this: <td> {{obj.property_name}} </ td>
+>
+>**b)** I had to <b>modify the CSV</b> file as there were white spaces at the header, for example: 'Property Name' , so I couldn't call each object from the html inside the table like this: <td> {{obj.property_name}} </ td>
 >
 >As well I couldn't find the way to delete the '[]' symbols in the header, for example: 'Property Address [1]'.
 >
 >And along the rows were more commas than they were supposed to be.
 >
->**c)** Consider that before this exercise I didn't have any knowledge in Python.
-
+>**c)** Dependencies used : csv, render_template, request, redirect
+>
+>**d)** For more detailed comments have a look inside the code.
+>
+>**f)** <b>Consider that 2 days ago, before this exercise, I didn't have any knowledge in Python.</b>
+Run it
+---------------
+To run it you have to have Python3 and Flask installed. Then inside the folder run: $ python app.py
 
 
