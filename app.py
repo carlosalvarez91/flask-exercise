@@ -8,8 +8,8 @@ app = Flask(__name__)
 #    csv_path = 'data.csv'
 #    csv_file = open(csv_path, 'rb' )
 #    csv_obj = csv.DictReader(csv_file)
-#    srt = sorted(csv_obj, key=lambda row: row, reverse=True)#list sorted by lease amount in ascending order.
-#    csv_list = list(srt)[:5]# [:5] display the first 5 items
+#    srt = sorted(csv_obj, key=lambda row: row, reverse=True)
+#    csv_list = list(srt)[:5]
 #    return csv_list, csv_file
 
 def get_csv():
